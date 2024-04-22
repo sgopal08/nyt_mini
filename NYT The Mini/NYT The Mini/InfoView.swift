@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-import SwiftUI
-
 struct InfoView: View {
     let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()

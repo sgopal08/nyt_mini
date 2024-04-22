@@ -8,6 +8,7 @@ struct CrosswordView: View {
     @State private var currentClue: String?
     @State private var index = 0
     @State private var isEditing: Bool = false
+
     
 
     var body: some View {

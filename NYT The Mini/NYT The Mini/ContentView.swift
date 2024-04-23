@@ -14,9 +14,10 @@ struct ContentView: View {
 
     var body: some View {
         NavigationStack{
-            VStack {
-                
+            VStack(spacing: 0) {
                 NavBar()
+                
+                Spacer()
                 
                 CrosswordView()
                 .padding(.bottom, 25)
@@ -26,9 +27,13 @@ struct ContentView: View {
             }
             .padding()
             .background(Color.white)
+            .navigationBarHidden(true)
+            
+            Spacer()
 
         }
-      
+        .navigationBarBackButtonHidden(true)
+
     }
 }
 

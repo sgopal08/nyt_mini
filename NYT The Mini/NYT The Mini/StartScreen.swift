@@ -8,19 +8,33 @@
 import SwiftUI
 
 struct StartScreen: View {
+    
+    @State private var showStartScreen: Bool = false
+    @Environment(\.presentationMode) var presentationMode
+
+    
+    let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM d, yyyy"
+        return formatter
+    }()
+
     var body: some View {
         NavigationView {
             ZStack {
-                Color("periwinkle")
+                Color("lightBlue")
                     .edgesIgnoringSafeArea(.all)
                 VStack {
-                    //star image icon here
+                    Image("icon")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 50, height: 50)
                     Text("The Mini Crossword")
-                        .font(.title)
+                        .font(.largeTitle)
                         .bold()
                     Text("Ready to start solving?")
-                        .font(.headline)
-                        .padding(.bottom, 30)
+                        .font(.title)
+                        .padding(.bottom, 25)
                     NavigationLink(destination: ContentView()) {
                         Text("Begin")
                             .foregroundColor(.white)
@@ -29,11 +43,53 @@ struct StartScreen: View {
                             .frame(width: 150, height: 50)
                             .background(Color.black)
                             .cornerRadius(30)
-                        
+
                     }
+                    .padding(.bottom, 25)
+                    .navigationBarHidden(true)
+                    Text("Want to save your progress?")
+                        .font(.headline)
+                    
+                    Button(action: {
+                    }) {
+                        Text("Log in")
+                            .foregroundColor(.black)
+                            .padding()
+                            .frame(width: 150, height: 50)
+                    }
+                    .background(Color("lightBlue"))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 30)
+                            .stroke(Color.black, lineWidth: 1)
+                    )
+                    
+                    Button(action: {
+                    }) {
+                        Text("Create account")
+                            .foregroundColor(.black)
+                            .padding()
+                            .frame(width: 150, height: 50)
+                    }
+                    .background(Color("lightBlue"))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 30)
+                            .stroke(Color.black, lineWidth: 1)
+                    )
+                    
+                    
+                    Text(Date(), formatter: dateFormatter)
+                        .font(.headline)
+                        .padding(.top, 20)
+                        .bold()
+                        .multilineTextAlignment(.center)
+                    
+                    Text("By Sanjana Gopalswamy")
+                    
+
                 }
             }
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 

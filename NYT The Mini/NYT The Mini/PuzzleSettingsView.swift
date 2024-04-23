@@ -55,7 +55,7 @@ struct PuzzleSettingsView: View {
 struct CustomToggleStyle: ToggleStyle {
     func makeBody(configuration: Configuration) -> some View {
         Toggle(configuration)
-            .tint(Color("lightBlue"))
+            .tint(Color("periwinkle"))
     }
 }
 

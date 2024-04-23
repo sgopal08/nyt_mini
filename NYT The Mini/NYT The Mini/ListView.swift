@@ -11,8 +11,6 @@ struct ListView: View {
     var body: some View {
         NavigationView{
             VStack{
-                NavBar()
-                    .padding()
                 ScrollView{
                     ZStack{
                         Rectangle()

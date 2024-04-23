@@ -15,6 +15,7 @@ struct NavBar: View {
     @State private var showSettings: Bool = false
     @State private var showInfo: Bool = false
     @State private var showList: Bool = false
+    @Binding var showStartScreen: Bool
     
     
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
@@ -29,10 +30,17 @@ struct NavBar: View {
     var body: some View {
         
         HStack{
-            Image(systemName: "chevron.down")
-                .font(.title)
-                .foregroundColor(Color("periwinkle"))
-                .bold()
+            NavigationLink(destination: StartScreen(), isActive: $showStartScreen) {
+                EmptyView()
+            }
+            Button(action: {
+                    showStartScreen.toggle()
+                }) {
+                    Image(systemName: "chevron.down")
+                        .font(.title)
+                        .foregroundColor(Color("periwinkle"))
+                        .bold()
+                }
             Spacer()
             Text("\(formatTime(elapsedTime))")
                 .foregroundColor(.black)
@@ -111,11 +119,12 @@ struct NavBar: View {
         .sheet(isPresented: $showList){
             ListView()
         }
+        
     }
 }
 
 
 
-#Preview {
-    NavBar()
-}
+//#Preview {
+//    NavBar(showStartScreen:)
+//}

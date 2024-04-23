@@ -11,7 +11,7 @@ import SwiftUI
 struct NYT_The_MiniApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            StartScreen()
         }
     }
 }

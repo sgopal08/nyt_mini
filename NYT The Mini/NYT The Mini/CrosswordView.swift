@@ -27,7 +27,7 @@ struct CrosswordView: View {
                                     .multilineTextAlignment(.center)
                                     .autocorrectionDisabled(true)
                                     .onTapGesture {
-                                        self.isEditing = true
+//                                        self.isEditing = true
                                         selectedCell = (row,column)
                                         if tappedCells[row][column] < 2 {
                                             tappedCells[row][column] += 1
@@ -91,15 +91,6 @@ struct CrosswordView: View {
                         
                         Text(currentText)
                             .font(.callout)
-                        //
-                        //                        if let currentClue = currentClue {
-                        //                            Text(currentClue)
-                        //                                .padding()
-                        //                        } else {
-                        //                            Text(clues[index])
-                        //                                .padding()
-                        //                                .font(.callout)
-                        //                        }
                         Spacer()
                         Button(action: {
                             index += 1
@@ -116,12 +107,12 @@ struct CrosswordView: View {
                 }
         
             }
-            .onTapGesture {
-                if self.isEditing {
-                    self.isEditing = false
-                    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-                }
-            }
+//            .onTapGesture {
+//                if self.isEditing {
+//                    self.isEditing = false
+//                    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+//                }
+//            }
             
         }
         Spacer()

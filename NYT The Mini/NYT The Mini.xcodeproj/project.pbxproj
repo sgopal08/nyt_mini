@@ -12,8 +12,8 @@
 		B8100A202BD0D91200BEACEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8100A1F2BD0D91200BEACEC /* Assets.xcassets */; };
 		B8100A232BD0D91200BEACEC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8100A222BD0D91200BEACEC /* Preview Assets.xcassets */; };
 		B8100A2C2BD189A400BEACEC /* PuzzleSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8100A2B2BD189A400BEACEC /* PuzzleSettingsView.swift */; };
+		B8B9EDF52BD6F5C400F1E81B /* WonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B9EDF42BD6F5C400F1E81B /* WonView.swift */; };
 		B8CC4BFC2BD237C100501C96 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CC4BFB2BD237C100501C96 /* InfoView.swift */; };
-		B8CC4C002BD24B0F00501C96 /* ClueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CC4BFF2BD24B0F00501C96 /* ClueView.swift */; };
 		B8CC4C042BD6061C00501C96 /* CrosswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CC4C032BD6061C00501C96 /* CrosswordView.swift */; };
 		B8CC4C082BD6205D00501C96 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CC4C072BD6205D00501C96 /* ListView.swift */; };
 		B8CC4C0A2BD6259900501C96 /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CC4C092BD6259900501C96 /* NavBar.swift */; };
@@ -26,8 +26,8 @@
 		B8100A1F2BD0D91200BEACEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B8100A222BD0D91200BEACEC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B8100A2B2BD189A400BEACEC /* PuzzleSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleSettingsView.swift; sourceTree = "<group>"; };
+		B8B9EDF42BD6F5C400F1E81B /* WonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WonView.swift; sourceTree = "<group>"; };
 		B8CC4BFB2BD237C100501C96 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
-		B8CC4BFF2BD24B0F00501C96 /* ClueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClueView.swift; sourceTree = "<group>"; };
 		B8CC4C032BD6061C00501C96 /* CrosswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrosswordView.swift; sourceTree = "<group>"; };
 		B8CC4C072BD6205D00501C96 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		B8CC4C092BD6259900501C96 /* NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBar.swift; sourceTree = "<group>"; };
@@ -67,8 +67,8 @@
 				B8100A1D2BD0D90F00BEACEC /* ContentView.swift */,
 				B8CC4C092BD6259900501C96 /* NavBar.swift */,
 				B8CC4C032BD6061C00501C96 /* CrosswordView.swift */,
+				B8B9EDF42BD6F5C400F1E81B /* WonView.swift */,
 				B8CC4C072BD6205D00501C96 /* ListView.swift */,
-				B8CC4BFF2BD24B0F00501C96 /* ClueView.swift */,
 				B8CC4BFB2BD237C100501C96 /* InfoView.swift */,
 				B8100A2B2BD189A400BEACEC /* PuzzleSettingsView.swift */,
 				B8100A1F2BD0D91200BEACEC /* Assets.xcassets */,
@@ -157,8 +157,8 @@
 			files = (
 				B8100A1E2BD0D90F00BEACEC /* ContentView.swift in Sources */,
 				B8CC4C0A2BD6259900501C96 /* NavBar.swift in Sources */,
+				B8B9EDF52BD6F5C400F1E81B /* WonView.swift in Sources */,
 				B8CC4C082BD6205D00501C96 /* ListView.swift in Sources */,
-				B8CC4C002BD24B0F00501C96 /* ClueView.swift in Sources */,
 				B8100A2C2BD189A400BEACEC /* PuzzleSettingsView.swift in Sources */,
 				B8100A1C2BD0D90F00BEACEC /* NYT_The_MiniApp.swift in Sources */,
 				B8CC4BFC2BD237C100501C96 /* InfoView.swift in Sources */,

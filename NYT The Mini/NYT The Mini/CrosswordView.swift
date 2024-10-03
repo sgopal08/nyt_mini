@@ -7,9 +7,8 @@ struct CrosswordView: View {
     @State private var selectedCell: (row: Int, column: Int)? = nil
     @State private var currentClue: String?
     @State private var index = 0
-    @State private var isEditing: Bool = false
-
-    
+    @State private var isEditing: Bool = true
+    @State private var pencilPressed: Bool = false
 
     var body: some View {
         VStack {
@@ -24,6 +23,7 @@ struct CrosswordView: View {
                                     .frame(width: 77, height: 77)
                                     .border(Color.gray, width: 1)
                                     .background(selectedCell != nil && selectedCell!.row == row && selectedCell!.column == column ? Color.yellow : Color.white)
+                                    .foregroundColor(pencilPressed ? Color.gray : Color.black)
                                     .multilineTextAlignment(.center)
                                     .autocorrectionDisabled(true)
                                     .onTapGesture {
@@ -70,6 +70,7 @@ struct CrosswordView: View {
                         }
                     }
                 }
+        
                 
                 ZStack{
                     Rectangle()
@@ -102,20 +103,17 @@ struct CrosswordView: View {
                                 .foregroundColor(.black)
                         }                }
                     .padding()
-
                     
                 }
-        
+                .onAppear {
+                       pencilPressed = false
+                   }
+    
             }
-//            .onTapGesture {
-//                if self.isEditing {
-//                    self.isEditing = false
-//                    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-//                }
-//            }
             
         }
         Spacer()
+        
     }
     
     let clues = ["Bluegrass instrument", "Audible way to think", "Aladdin character whose first line is \"Oy! 10,000 years will give you such a crick in the neck!\"", "Members of a company's C-suite", "Behind schedule", "Clue 1", "Clue 2", "Clue 3", "Clue 4", "Clue 5"]

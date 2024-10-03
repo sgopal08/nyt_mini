@@ -16,6 +16,7 @@ struct NavBar: View {
     @State private var showInfo: Bool = false
     @State private var showList: Bool = false
     @Binding var showStartScreen: Bool
+    @Binding var pencilPressed: Bool
     
     
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
@@ -59,20 +60,20 @@ struct NavBar: View {
             .padding(2)
             
             Button(action: {
-                self.pencilPress.toggle()
-            }) {
-                Image(systemName: "pencil")
-                    .font(.title)
-                    .foregroundColor(pencilPress ? .white : Color("periwinkle"))
-                    .padding(4)
-                    .background(pencilPress ? Color("periwinkle") : nil)
-                    .cornerRadius(10)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color.blue, lineWidth: pencilPress ? 1 : 0)
-                    )
-                    .padding(2)
-            }
+                     self.pencilPressed.toggle() 
+                 }) {
+                     Image(systemName: "pencil")
+                         .font(.title)
+                         .foregroundColor(pencilPressed ? .white : Color("periwinkle"))
+                         .padding(4)
+                         .background(pencilPressed ? Color("periwinkle") : nil)
+                         .cornerRadius(10)
+                         .overlay(
+                             RoundedRectangle(cornerRadius: 10)
+                                 .stroke(Color.blue, lineWidth: pencilPressed ? 1 : 0)
+                         )
+                         .padding(2)
+                 }
             
             Button(action: {
                 self.lifePress.toggle()

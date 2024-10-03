@@ -11,12 +11,13 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var showStartScreen: Bool = false
+    @State private var pencilPressed: Bool = false
     @State private var currentClue: String?
 
     var body: some View {
         NavigationStack{
             VStack(spacing: 0) {
-                NavBar(showStartScreen: $showStartScreen)
+                NavBar(showStartScreen: $showStartScreen, pencilPressed: $pencilPressed)
                 
                 Spacer()
                 

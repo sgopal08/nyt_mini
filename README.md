@@ -1,7 +1,8 @@
 # The Mini Crossword
 
-This is a UI recreation of the app version of the New York Times Mini crossword game. This app utilizes concepts such as `ForEach`, `@State` variables `TextField`, and more.
-This crossword was taken from the New York Times Mini April 18th daily crossword.
+This mobile application is a functional recreation of the NYT mini crossword game built through Swift/SwiftUI. Created as my final project during my semester as an iOS Academy member at App Team Carolina, I utilized advanced Swift concepts such as array manipulation, state management, and user interaction. 
+
+***This crossword was taken from the New York Times Mini April 18th daily crossword.***
 
 <img width="331" alt="image" src="https://github.com/user-attachments/assets/0e14d161-65bd-4bd2-b731-e910e8a8694b">
 <img width="348" alt="Screenshot 2024-04-22 at 12 29 31 AM" src="https://github.com/appteamcarolina/f23-academy-final-project-sgopal08/assets/143037664/9efa9ce4-ae26-4eee-a18b-098d9430c14e">
